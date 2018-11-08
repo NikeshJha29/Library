@@ -1,0 +1,62 @@
+<style type="text/css">
+    li {
+ display: block;
+ }
+li:hover {
+  cursor: pointer;
+}
+
+ul {
+  background: none;
+    list-style: none;
+    margin-right: 0;
+    padding : 5px;
+    margin-left: 0px;
+    font-size: 15px;
+    color:white;
+}
+
+li {
+    color: white;
+  background: none;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: #fff;
+}
+
+li:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+ul li ul ul li{
+    background: gray;
+    visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+    position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+    left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+    clear: both;
+  width: 100%;
+}
